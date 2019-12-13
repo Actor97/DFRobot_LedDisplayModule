@@ -154,7 +154,7 @@ public:
   
   /*!
    *  @brief 8位数码管打印显示信息
-   *  @param 第1~4位的显示数据，可以为数字0~9，大写字母A、B、C、D、E、F、H、L、O、P、U以及破折号- 
+   *  @param 第1~8位的显示数据，可以为数字0~9，大写字母A、B、C、D、E、F、H、L、O、P、U以及破折号- 
    *  @n 也可以带小数点，如"0." "9." "A." "-."
    */
   void print8(const char buf1[] = "82",const char buf2[] = "82",const char buf3[] = "82",const char buf4[] = "82",const char buf5[] = "82",const char buf6[] = "82",const char buf7[] = "82",const char buf8[] = "82");
