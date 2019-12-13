@@ -29,6 +29,7 @@ int DFRobot_LedDisplayModule::begin4()
   }
   setBrightness4(0);
   displayOn();
+  return 0;
 }
 
 int DFRobot_LedDisplayModule::begin8()
@@ -41,6 +42,7 @@ int DFRobot_LedDisplayModule::begin8()
   i2cWriteCmd(CMD_HT16K33_OSCON);
   displayOn();
   setBrightness8(15);
+  return 0;
 }
    
 void DFRobot_LedDisplayModule::displayOn()
