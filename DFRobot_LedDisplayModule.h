@@ -125,23 +125,13 @@ public:
    *  @brief 4位数码管设置显示区域
    *  @param 第1~4位的显示地址，可以为数字1~4
    */
-  void setDisplayArea4(int areaData);
-  void setDisplayArea4(int areaData1,int areaData2);
-  void setDisplayArea4(int areaData1,int areaData2,int areaData3);
-  void setDisplayArea4(int areaData1,int areaData2,int areaData3,int areaData4);
+  void setDisplayArea4(int areaData1 = 99,int areaData2 = 99,int areaData3 = 99,int areaData4 = 99);
 
   /*!
    *  @brief 8位数码管设置显示区域
    *  @param 第1~8位的显示地址，可以为数字1~8
    */
-  void setDisplayArea8(int areaData);
-  void setDisplayArea8(int areaData1,int areaData2);
-  void setDisplayArea8(int areaData1,int areaData2,int areaData3);
-  void setDisplayArea8(int areaData1,int areaData2,int areaData3,int areaData4);
-  void setDisplayArea8(int areaData1,int areaData2,int areaData3,int areaData4,int areaData5);
-  void setDisplayArea8(int areaData1,int areaData2,int areaData3,int areaData4,int areaData5,int areaData6);
-  void setDisplayArea8(int areaData1,int areaData2,int areaData3,int areaData4,int areaData5,int areaData6,int areaData7);
-  void setDisplayArea8(int areaData1,int areaData2,int areaData3,int areaData4,int areaData5,int areaData6,int areaData7,int areaData8);
+  void setDisplayArea8(int areaData1 = 99,int areaData2 = 99,int areaData3 = 99,int areaData4 = 99,int areaData5 = 99,int areaData6 = 99,int areaData7 = 99,int areaData8 = 99);
 
   /*!
    *  @brief 4位数码管打印显示信息
@@ -154,10 +144,7 @@ public:
    *  @param 第1~4位的显示数据，可以为数字0~9，大写字母A、B、C、D、E、F、H、L、O、P、U以及破折号- 
    *  @n 也可以带小数点，如"0." "9." "A." "-."
    */
-  void print4(const char buf1[]);
-  void print4(const char buf1[],const char buf2[]);
-  void print4(const char buf1[],const char buf2[],const char buf3[]);
-  void print4(const char buf1[],const char buf2[],const char buf3[],const char buf4[]);
+  void print4(const char buf1[] = "99",const char buf2[] = "99",const char buf3[] = "99",const char buf4[] = "99");
 
   /*!
    *  @brief 8位数码管打印显示信息
@@ -170,14 +157,7 @@ public:
    *  @param 第1~4位的显示数据，可以为数字0~9，大写字母A、B、C、D、E、F、H、L、O、P、U以及破折号- 
    *  @n 也可以带小数点，如"0." "9." "A." "-."
    */
-  void print8(const char buf1[]);
-  void print8(const char buf1[],const char buf2[]);
-  void print8(const char buf1[],const char buf2[],const char buf3[]);
-  void print8(const char buf1[],const char buf2[],const char buf3[],const char buf4[]);
-  void print8(const char buf1[],const char buf2[],const char buf3[],const char buf4[],const char buf5[]);
-  void print8(const char buf1[],const char buf2[],const char buf3[],const char buf4[],const char buf5[],const char buf6[]);
-  void print8(const char buf1[],const char buf2[],const char buf3[],const char buf4[],const char buf5[],const char buf6[],const char buf7[]);
-  void print8(const char buf1[],const char buf2[],const char buf3[],const char buf4[],const char buf5[],const char buf6[],const char buf7[],const char buf8[]);
+  void print8(const char buf1[] = "99",const char buf2[] = "99",const char buf3[] = "99",const char buf4[] = "99",const char buf5[] = "99",const char buf6[] = "99",const char buf7[] = "99",const char buf8[] = "99");
 
 private:
   TwoWire *_pWire;
