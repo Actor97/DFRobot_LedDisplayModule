@@ -125,13 +125,13 @@ public:
    *  @brief 4位数码管设置显示区域
    *  @param 第1~4位的显示地址，可以为数字1~4
    */
-  void setDisplayArea4(int areaData1 = 99,int areaData2 = 99,int areaData3 = 99,int areaData4 = 99);
+  void setDisplayArea4(int areaData1 = 82,int areaData2 = 82,int areaData3 = 82,int areaData4 = 82);
 
   /*!
    *  @brief 8位数码管设置显示区域
    *  @param 第1~8位的显示地址，可以为数字1~8
    */
-  void setDisplayArea8(int areaData1 = 99,int areaData2 = 99,int areaData3 = 99,int areaData4 = 99,int areaData5 = 99,int areaData6 = 99,int areaData7 = 99,int areaData8 = 99);
+  void setDisplayArea8(int areaData1 = 82,int areaData2 = 82,int areaData3 = 82,int areaData4 = 82,int areaData5 = 82,int areaData6 = 82,int areaData7 = 82,int areaData8 = 82);
 
   /*!
    *  @brief 4位数码管打印显示信息
@@ -144,7 +144,7 @@ public:
    *  @param 第1~4位的显示数据，可以为数字0~9，大写字母A、B、C、D、E、F、H、L、O、P、U以及破折号- 
    *  @n 也可以带小数点，如"0." "9." "A." "-."
    */
-  void print4(const char buf1[] = "99",const char buf2[] = "99",const char buf3[] = "99",const char buf4[] = "99");
+  void print4(const char buf1[] = "82",const char buf2[] = "82",const char buf3[] = "82",const char buf4[] = "82");
 
   /*!
    *  @brief 8位数码管打印显示信息
@@ -157,7 +157,7 @@ public:
    *  @param 第1~4位的显示数据，可以为数字0~9，大写字母A、B、C、D、E、F、H、L、O、P、U以及破折号- 
    *  @n 也可以带小数点，如"0." "9." "A." "-."
    */
-  void print8(const char buf1[] = "99",const char buf2[] = "99",const char buf3[] = "99",const char buf4[] = "99",const char buf5[] = "99",const char buf6[] = "99",const char buf7[] = "99",const char buf8[] = "99");
+  void print8(const char buf1[] = "82",const char buf2[] = "82",const char buf3[] = "82",const char buf4[] = "82",const char buf5[] = "82",const char buf6[] = "82",const char buf7[] = "82",const char buf8[] = "82");
 
 private:
   TwoWire *_pWire;
@@ -228,14 +228,7 @@ private:
   /*!
    *  @brief 从用户输入处获取第1~8位的显示数据
    */
-  void  getDisplayData1();
-  void  getDisplayData2();
-  void  getDisplayData3();
-  void  getDisplayData4();
-  void  getDisplayData5();
-  void  getDisplayData6();
-  void  getDisplayData7();
-  void  getDisplayData8();
+  void  getDisplayData();
 
   /*!
    *  @brief 4位数码管获取显示地址

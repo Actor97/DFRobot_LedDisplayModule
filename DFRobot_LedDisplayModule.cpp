@@ -89,20 +89,20 @@ void DFRobot_LedDisplayModule::setBrightness8(int brightnessValue)
   i2cWriteCmd(0xE0|brightnessValue);
 }
 
-void DFRobot_LedDisplayModule::setDisplayArea4(int areaData1 = 99,int areaData2 = 99,int areaData3 = 99,int areaData4 = 99)
+void DFRobot_LedDisplayModule::setDisplayArea4(int areaData1 = 82,int areaData2 = 82,int areaData3 = 82,int areaData4 = 82)
 {
-  if(areaData2==99 && areaData3==99 && areaData4==99)
+  if(areaData2==82 && areaData3==82 && areaData4==82)
   {
     displayAreaFlag = 1;
     d11 = areaData1;
   }
-  else if(areaData3==99 && areaData4==99)
+  else if(areaData3==82 && areaData4==82)
   {
     displayAreaFlag = 2;
     d21 = areaData1;
     d22 = areaData2;
   }
-  else if(areaData4==99)
+  else if(areaData4==82)
   {
     displayAreaFlag = 3;
     d31 = areaData1;
@@ -119,27 +119,27 @@ void DFRobot_LedDisplayModule::setDisplayArea4(int areaData1 = 99,int areaData2 
   } 
 }
 
-void DFRobot_LedDisplayModule::setDisplayArea8(int areaData1 = 99,int areaData2 = 99,int areaData3 = 99,int areaData4 = 99,int areaData5 = 99,int areaData6 = 99,int areaData7 = 99,int areaData8 = 99)
+void DFRobot_LedDisplayModule::setDisplayArea8(int areaData1 = 82,int areaData2 = 82,int areaData3 = 82,int areaData4 = 82,int areaData5 = 82,int areaData6 = 82,int areaData7 = 82,int areaData8 = 82)
 {
-  if(areaData2==99 && areaData3==99 && areaData4==99 && areaData5==99 && areaData6==99 && areaData7==99 && areaData8==99)
+  if(areaData2==82 && areaData3==82 && areaData4==82 && areaData5==82 && areaData6==82 && areaData7==82 && areaData8==82)
   {
     displayAreaFlag = 1;
     d11 = areaData1;
   }
-  else if(areaData3==99 && areaData4==99 && areaData5==99 && areaData6==99 && areaData7==99 && areaData8==99)
+  else if(areaData3==82 && areaData4==82 && areaData5==82 && areaData6==82 && areaData7==82 && areaData8==82)
   {
     displayAreaFlag = 2;
     d21 = areaData1;
     d22 = areaData2;
   }
-  else if(areaData4==99 && areaData5==99 && areaData6==99 && areaData7==99 && areaData8==99)
+  else if(areaData4==82 && areaData5==82 && areaData6==82 && areaData7==82 && areaData8==82)
   {
     displayAreaFlag = 3;
     d31 = areaData1;
     d32 = areaData2;
     d33 = areaData3;
   }
-  else if(areaData5==99 && areaData6==99 && areaData7==99 && areaData8==99)
+  else if(areaData5==82 && areaData6==82 && areaData7==82 && areaData8==82)
   {
     displayAreaFlag = 4;  
     d41 = areaData1;
@@ -147,7 +147,7 @@ void DFRobot_LedDisplayModule::setDisplayArea8(int areaData1 = 99,int areaData2 
     d43 = areaData3;
     d44 = areaData4;
   } 
-  else if(areaData6==99 && areaData7==99 && areaData8==99)
+  else if(areaData6==82 && areaData7==82 && areaData8==82)
   {
     displayAreaFlag = 5;
     d51 = areaData1;
@@ -156,7 +156,7 @@ void DFRobot_LedDisplayModule::setDisplayArea8(int areaData1 = 99,int areaData2 
     d54 = areaData4;
     d55 = areaData5; 
   }
-  else if(areaData7==99 && areaData8==99)
+  else if(areaData7==82 && areaData8==82)
   {
     displayAreaFlag = 6;
     d61 = areaData1;
@@ -166,7 +166,7 @@ void DFRobot_LedDisplayModule::setDisplayArea8(int areaData1 = 99,int areaData2 
     d65 = areaData5; 
     d66 = areaData6;
   }
-  else if(areaData8==99)
+  else if(areaData8==82)
   {
     displayAreaFlag = 7;
     d71 = areaData1;
@@ -246,30 +246,30 @@ void DFRobot_LedDisplayModule::print4(double sensorData)
   }
 }   
 
-void DFRobot_LedDisplayModule::print4(const char buf1[] = "99",const char buf2[] = "99",const char buf3[] = "99",const char buf4[] = "99")
+void DFRobot_LedDisplayModule::print4(const char buf1[] = "82",const char buf2[] = "82",const char buf3[] = "82",const char buf4[] = "82")
 {
-  if (buf1[0] != "99"){
+  if (buf1[0] != "82"){
   ledData1 = buf1[0];
   ledData11 = buf1[1];
   }else{
     ledData1 = 10;
     ledData11 = 10;
   }
-  if (buf2[0] != "99"){
+  if (buf2[0] != "82"){
   ledData2 = buf2[0];
   ledData22 = buf2[1];
   }else{
     ledData2 = 10;
     ledData22 = 10;
   }
-  if (buf3[0] != "99"){
+  if (buf3[0] != "82"){
   ledData3 = buf3[0];
   ledData33 = buf3[1];
   }else{
     ledData3 = 10;
     ledData33 = 10;
   }
-  if (buf4[0] != "99"){
+  if (buf4[0] != "82"){
   ledData4 = buf4[0];
   ledData44 = buf4[1]; 
   }else{
@@ -277,7 +277,7 @@ void DFRobot_LedDisplayModule::print4(const char buf1[] = "99",const char buf2[]
     ledData44 = 10;
   }  
   
-  getDisplayData4();
+  getDisplayData();
   switch(displayAreaFlag)
   {
     case 1:sensorGetDisplayAddress4(); i2cWriteData4(a1,data1);i2cWriteData4(d1,0x00);i2cWriteData4(d2,0x00);i2cWriteData4(d3,0x00);break;
@@ -487,30 +487,30 @@ void DFRobot_LedDisplayModule::print8(double sensorData)
   }
 }
 
-void DFRobot_LedDisplayModule::print8(const char buf1[] = "99",const char buf2[] = "99",const char buf3[] = "99",const char buf4[] = "99",const char buf5[] = "99",const char buf6[] = "99",const char buf7[] = "99",const char buf8[] = "99")
+void DFRobot_LedDisplayModule::print8(const char buf1[] = "82",const char buf2[] = "82",const char buf3[] = "82",const char buf4[] = "82",const char buf5[] = "82",const char buf6[] = "82",const char buf7[] = "82",const char buf8[] = "82")
 {
-  if (buf1[0] != "99"){
+  if (buf1[0] != "82"){
   ledData1 = buf1[0];
   ledData11 = buf1[1];
   }else{
     ledData1 = 10;
     ledData11 = 10;
   }
-  if (buf2[0] != "99"){
+  if (buf2[0] != "82"){
   ledData2 = buf2[0];
   ledData22 = buf2[1];
   }else{
     ledData2 = 10;
     ledData22 = 10;
   }
-  if (buf3[0] != "99"){
+  if (buf3[0] != "82"){
   ledData3 = buf3[0];
   ledData33 = buf3[1];
   }else{
     ledData3 = 10;
     ledData33 = 10;
   }
-  if (buf4[0] != "99"){
+  if (buf4[0] != "82"){
   ledData4 = buf4[0];
   ledData44 = buf4[1]; 
   }else{
@@ -518,28 +518,28 @@ void DFRobot_LedDisplayModule::print8(const char buf1[] = "99",const char buf2[]
     ledData44 = 10;
   }  
  
-  if (buf5[0] != "99"){
+  if (buf5[0] != "82"){
   ledData5 = buf5[0];
   ledData55 = buf5[1];
   }else{
     ledData5 = 10;
     ledData55 = 10;
   }
-  if (buf6[0] != "99"){
+  if (buf6[0] != "82"){
   ledData6 = buf6[0];
   ledData66 = buf6[1];
   }else{
     ledData6 = 10;
     ledData66 = 10;
   }
-  if (buf7[0] != "99"){
+  if (buf7[0] != "82"){
   ledData7 = buf7[0];
   ledData77 = buf7[1];
   }else{
     ledData7 = 10;
     ledData77 = 10;
   }
-  if (buf8[0] != "99"){
+  if (buf8[0] != "82"){
   ledData8 = buf8[0];
   ledData88 = buf8[1]; 
   }else{
@@ -547,7 +547,7 @@ void DFRobot_LedDisplayModule::print8(const char buf1[] = "99",const char buf2[]
     ledData88 = 10;
   } 
   
-  getDisplayData8();
+  getDisplayData();
   switch(displayAreaFlag)
   {
   case 1:sensorGetDisplayAddress8();i2cWriteData(a1,data1);i2cWriteData(d7,0x00);i2cWriteData(d6,0x00);i2cWriteData(d5,0x00);
@@ -612,532 +612,7 @@ void DFRobot_LedDisplayModule::printCacheReset()
   ledData88='0';
 }
 
-void  DFRobot_LedDisplayModule::getDisplayData1()
-{
-  if(ledData1==46 || ledData11==46)
-  {
-    if(ledData1==46)
-    {
-     data1 = 0x80;
-    }
-    else
-    {
-      if(ledData1==45) ledData1 = 84;      
-     data1 = TAB_Point2[ledData1-48];
-    }
-  }
-  else
-  {
-    if(ledData1==45) ledData1 = 84;
-   data1 = TAB2[ledData1-48];
-  }
-}
-
-void  DFRobot_LedDisplayModule::getDisplayData2()
-{
-  if(ledData1==46 || ledData11==46)
-  {
-    if(ledData1==46)
-    {
-     data1 = 0x80;
-    }
-    else
-    {
-      if(ledData1==45) ledData1 = 84;      
-     data1 = TAB_Point2[ledData1-48];
-    }
-  }
-  else
-  {
-    if(ledData1==45) ledData1 = 84;
-   data1 = TAB2[ledData1-48];
-  }
-
-  if(ledData2==46 || ledData22==46)
-  {
-    if(ledData2==46)
-    {
-      data2 = 0x80;
-    }
-    else
-    {
-      if(ledData2==45) ledData2 = 84;      
-      data2 = TAB_Point2[ledData2-48];
-    }
-  }
-  else
-  {
-    if(ledData2==45) ledData2 = 84;
-    data2 = TAB2[ledData2-48];
-  }
-}
-
-void  DFRobot_LedDisplayModule::getDisplayData3()
-{
-  if(ledData1==46 || ledData11==46)
-  {
-    if(ledData1==46)
-    {
-     data1 = 0x80;
-    }
-    else
-    {
-      if(ledData1==45) ledData1 = 84;      
-     data1 = TAB_Point2[ledData1-48];
-    }
-  }
-  else
-  {
-    if(ledData1==45) ledData1 = 84;
-   data1 = TAB2[ledData1-48];
-  }
-
-  if(ledData2==46 || ledData22==46)
-  {
-    if(ledData2==46)
-    {
-      data2 = 0x80;
-    }
-    else
-    {
-      if(ledData2==45) ledData2 = 84;      
-      data2 = TAB_Point2[ledData2-48];
-    }
-  }
-  else
-  {
-    if(ledData2==45) ledData2 = 84;
-    data2 = TAB2[ledData2-48];
-  }
-
-  if(ledData3==46 || ledData33==46)
-  {
-    if(ledData3==46)
-    {
-      data3 = 0x80;
-    }
-    else
-    {
-      if(ledData3==45) ledData3 = 84;      
-      data3 = TAB_Point2[ledData3-48];
-    }
-  }
-  else
-  {
-    if(ledData3==45) ledData3 = 84;
-    data3 = TAB2[ledData3-48];
-  }
-}
-
-void  DFRobot_LedDisplayModule::getDisplayData4()
-{
-  if(ledData1==46 || ledData11==46)
-  {
-    if(ledData1==46)
-    {
-     data1 = 0x80;
-    }
-    else
-    {
-      if(ledData1==45) ledData1 = 84;      
-     data1 = TAB_Point2[ledData1-48];
-    }
-  }
-  else
-  {
-    if(ledData1==45) ledData1 = 84;
-   data1 = TAB2[ledData1-48];
-  }
-
-  if(ledData2==46 || ledData22==46)
-  {
-    if(ledData2==46)
-    {
-      data2 = 0x80;
-    }
-    else
-    {
-      if(ledData2==45) ledData2 = 84;      
-      data2 = TAB_Point2[ledData2-48];
-    }
-  }
-  else
-  {
-    if(ledData2==45) ledData2 = 84;
-    data2 = TAB2[ledData2-48];
-  }
-
-  if(ledData3==46 || ledData33==46)
-  {
-    if(ledData3==46)
-    {
-      data3 = 0x80;
-    }
-    else
-    {
-      if(ledData3==45) ledData3 = 84;      
-      data3 = TAB_Point2[ledData3-48];
-    }
-  }
-  else
-  {
-    if(ledData3==45) ledData3 = 84;
-    data3 = TAB2[ledData3-48];
-  }
-
-  if(ledData4==46 || ledData44==46)
-  {
-    if(ledData4==46)
-    {
-      data4 = 0x80;
-    }
-    else
-    {
-      if(ledData4==45) ledData4 = 84;      
-      data4 = TAB_Point2[ledData4-48];
-    }
-  }
-  else
-  {
-    if(ledData4==45) ledData4 = 84;
-    data4 = TAB2[ledData4-48];
-  }
-}
-
-void  DFRobot_LedDisplayModule::getDisplayData5()
-{
-  if(ledData1==46 || ledData11==46)
-  {
-    if(ledData1==46)
-    {
-     data1 = 0x80;
-    }
-    else
-    {
-      if(ledData1==45) ledData1 = 84;      
-     data1 = TAB_Point2[ledData1-48];
-    }
-  }
-  else
-  {
-    if(ledData1==45) ledData1 = 84;
-   data1 = TAB2[ledData1-48];
-  }
-
-  if(ledData2==46 || ledData22==46)
-  {
-    if(ledData2==46)
-    {
-      data2 = 0x80;
-    }
-    else
-    {
-      if(ledData2==45) ledData2 = 84;      
-      data2 = TAB_Point2[ledData2-48];
-    }
-  }
-  else
-  {
-    if(ledData2==45) ledData2 = 84;
-    data2 = TAB2[ledData2-48];
-  }
-
-  if(ledData3==46 || ledData33==46)
-  {
-    if(ledData3==46)
-    {
-      data3 = 0x80;
-    }
-    else
-    {
-      if(ledData3==45) ledData3 = 84;      
-      data3 = TAB_Point2[ledData3-48];
-    }
-  }
-  else
-  {
-    if(ledData3==45) ledData3 = 84;
-    data3 = TAB2[ledData3-48];
-  }
-
-  if(ledData4==46 || ledData44==46)
-  {
-    if(ledData4==46)
-    {
-      data4 = 0x80;
-    }
-    else
-    {
-      if(ledData4==45) ledData4 = 84;      
-      data4 = TAB_Point2[ledData4-48];
-    }
-  }
-  else
-  {
-    if(ledData4==45) ledData4 = 84;
-    data4 = TAB2[ledData4-48];
-  }
-
-  if(ledData5==46 || ledData55==46)
-  {
-    if(ledData5==46)
-    {
-      data5 = 0x80;
-    }
-    else
-    {
-      if(ledData5==45) ledData5 = 84;      
-      data5 = TAB_Point2[ledData5-48];
-    }
-  }
-  else
-  {
-    if(ledData5==45) ledData5 = 84;
-    data5 = TAB2[ledData5-48];
-  }
-}
-
-void  DFRobot_LedDisplayModule::getDisplayData6()
-{
-  if(ledData1==46 || ledData11==46)
-  {
-    if(ledData1==46)
-    {
-     data1 = 0x80;
-    }
-    else
-    {
-      if(ledData1==45) ledData1 = 84;      
-     data1 = TAB_Point2[ledData1-48];
-    }
-  }
-  else
-  {
-    if(ledData1==45) ledData1 = 84;
-   data1 = TAB2[ledData1-48];
-  }
-
-  if(ledData2==46 || ledData22==46)
-  {
-    if(ledData2==46)
-    {
-      data2 = 0x80;
-    }
-    else
-    {
-      if(ledData2==45) ledData2 = 84;      
-      data2 = TAB_Point2[ledData2-48];
-    }
-  }
-  else
-  {
-    if(ledData2==45) ledData2 = 84;
-    data2 = TAB2[ledData2-48];
-  }
-
-  if(ledData3==46 || ledData33==46)
-  {
-    if(ledData3==46)
-    {
-      data3 = 0x80;
-    }
-    else
-    {
-      if(ledData3==45) ledData3 = 84;      
-      data3 = TAB_Point2[ledData3-48];
-    }
-  }
-  else
-  {
-    if(ledData3==45) ledData3 = 84;
-    data3 = TAB2[ledData3-48];
-  }
-
-  if(ledData4==46 || ledData44==46)
-  {
-    if(ledData4==46)
-    {
-      data4 = 0x80;
-    }
-    else
-    {
-      if(ledData4==45) ledData4 = 84;      
-      data4 = TAB_Point2[ledData4-48];
-    }
-  }
-  else
-  {
-    if(ledData4==45) ledData4 = 84;
-    data4 = TAB2[ledData4-48];
-  }
-
-  if(ledData5==46 || ledData55==46)
-  {
-    if(ledData5==46)
-    {
-      data5 = 0x80;
-    }
-    else
-    {
-      if(ledData5==45) ledData5 = 84;      
-      data5 = TAB_Point2[ledData5-48];
-    }
-  }
-  else
-  {
-    if(ledData5==45) ledData5 = 84;
-    data5 = TAB2[ledData5-48];
-  }
-
-  if(ledData6==46 || ledData66==46)
-  {
-    if(ledData6==46)
-    {
-      data6 = 0x80;
-    }
-    else
-    {
-      if(ledData6==45) ledData6 = 84;      
-      data6 = TAB_Point2[ledData6-48];
-    }
-  }
-  else
-  {
-    if(ledData6==45) ledData6 = 84;
-    data6 = TAB2[ledData6-48];
-  }
-}
-
-void  DFRobot_LedDisplayModule::getDisplayData7()
-{
-  if(ledData1==46 || ledData11==46)
-  {
-    if(ledData1==46)
-    {
-     data1 = 0x80;
-    }
-    else
-    {
-      if(ledData1==45) ledData1 = 84;      
-     data1 = TAB_Point2[ledData1-48];
-    }
-  }
-  else
-  {
-    if(ledData1==45) ledData1 = 84;
-   data1 = TAB2[ledData1-48];
-  }
-
-  if(ledData2==46 || ledData22==46)
-  {
-    if(ledData2==46)
-    {
-      data2 = 0x80;
-    }
-    else
-    {
-      if(ledData2==45) ledData2 = 84;      
-      data2 = TAB_Point2[ledData2-48];
-    }
-  }
-  else
-  {
-    if(ledData2==45) ledData2 = 84;
-    data2 = TAB2[ledData2-48];
-  }
-
-  if(ledData3==46 || ledData33==46)
-  {
-    if(ledData3==46)
-    {
-      data3 = 0x80;
-    }
-    else
-    {
-      if(ledData3==45) ledData3 = 84;      
-      data3 = TAB_Point2[ledData3-48];
-    }
-  }
-  else
-  {
-    if(ledData3==45) ledData3 = 84;
-    data3 = TAB2[ledData3-48];
-  }
-
-  if(ledData4==46 || ledData44==46)
-  {
-    if(ledData4==46)
-    {
-      data4 = 0x80;
-    }
-    else
-    {
-      if(ledData4==45) ledData4 = 84;      
-      data4 = TAB_Point2[ledData4-48];
-    }
-  }
-  else
-  {
-    if(ledData4==45) ledData4 = 84;
-    data4 = TAB2[ledData4-48];
-  }
-
-  if(ledData5==46 || ledData55==46)
-  {
-    if(ledData5==46)
-    {
-      data5 = 0x80;
-    }
-    else
-    {
-      if(ledData5==45) ledData5 = 84;      
-      data5 = TAB_Point2[ledData5-48];
-    }
-  }
-  else
-  {
-    if(ledData5==45) ledData5 = 84;
-    data5 = TAB2[ledData5-48];
-  }
-
-  if(ledData6==46 || ledData66==46)
-  {
-    if(ledData6==46)
-    {
-      data6 = 0x80;
-    }
-    else
-    {
-      if(ledData6==45) ledData6 = 84;      
-      data6 = TAB_Point2[ledData6-48];
-    }
-  }
-  else
-  {
-    if(ledData6==45) ledData6 = 84;
-    data6 = TAB2[ledData6-48];
-  }
-
-  if(ledData7==46 || ledData77==46)
-  {
-    if(ledData7==46)
-    {
-      data7 = 0x80;
-    }
-    else
-    {
-      if(ledData7==45) ledData7 = 84;      
-      data7 = TAB_Point2[ledData7-48];
-    }
-  }
-  else
-  {
-    if(ledData7==45) ledData7 = 84;
-    data7 = TAB2[ledData7-48];
-  }
-}
-
-void  DFRobot_LedDisplayModule::getDisplayData8()
+void  DFRobot_LedDisplayModule::getDisplayData()
 {
   if(ledData1==46 || ledData11==46)
   {
