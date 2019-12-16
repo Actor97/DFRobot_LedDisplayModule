@@ -237,20 +237,20 @@ private:
   /*!
    *  @brief 4位数码管获取显示地址
    */
-  void getDisplayAddress4_1();
-  void getDisplayAddress4_2();
-  void getDisplayAddress4_3(); 
+  void getDisplayAddress41();
+  void getDisplayAddress42();
+  void getDisplayAddress43(); 
   
   /*!
    *  @brief 8位数码管获取显示地址
    */
-  void getDisplayAddress8_1();
-  void getDisplayAddress8_2();
-  void getDisplayAddress8_3();
-  void getDisplayAddress8_4();
-  void getDisplayAddress8_5();
-  void getDisplayAddress8_6();
-  void getDisplayAddress8_7();
+  void getDisplayAddress81();
+  void getDisplayAddress82();
+  void getDisplayAddress83();
+  void getDisplayAddress84();
+  void getDisplayAddress85();
+  void getDisplayAddress86();
+  void getDisplayAddress87();
 
   /*!
    *  @brief 4位数码管获取显示地址(传感器数据模式)

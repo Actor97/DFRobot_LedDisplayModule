@@ -759,7 +759,7 @@ void  DFRobot_LedDisplayModule::getDisplayData()
   }
 }
 
-void DFRobot_LedDisplayModule::getDisplayAddress4_1()
+void DFRobot_LedDisplayModule::getDisplayAddress41()
 {
   int DisplayAreaData[4] = {1,2,3,4};
   
@@ -799,7 +799,7 @@ void DFRobot_LedDisplayModule::getDisplayAddress4_1()
   }
 }
 
-void DFRobot_LedDisplayModule::getDisplayAddress4_2()
+void DFRobot_LedDisplayModule::getDisplayAddress42()
 {
   int DisplayAreaData[4] = {1,2,3,4};
 
@@ -835,7 +835,7 @@ void DFRobot_LedDisplayModule::getDisplayAddress4_2()
   }
 }
 
-void DFRobot_LedDisplayModule::getDisplayAddress4_3()
+void DFRobot_LedDisplayModule::getDisplayAddress43()
 {
   int DisplayAreaData[4] = {1,2,3,4};
 
@@ -867,7 +867,7 @@ void DFRobot_LedDisplayModule::getDisplayAddress4_3()
   }
 }
 
-void DFRobot_LedDisplayModule::getDisplayAddress8_1()
+void DFRobot_LedDisplayModule::getDisplayAddress81()
 {
   int DisplayAreaData[8] = {1,2,3,4,5,6,7,8};
 
@@ -935,7 +935,7 @@ void DFRobot_LedDisplayModule::getDisplayAddress8_1()
   }
 }
 
-void DFRobot_LedDisplayModule::getDisplayAddress8_2()
+void DFRobot_LedDisplayModule::getDisplayAddress82()
 {
   int DisplayAreaData[8] = {1,2,3,4,5,6,7,8};
 
@@ -999,7 +999,7 @@ void DFRobot_LedDisplayModule::getDisplayAddress8_2()
   }
 }
 
-void DFRobot_LedDisplayModule::getDisplayAddress8_3()
+void DFRobot_LedDisplayModule::getDisplayAddress83()
 {
   int DisplayAreaData[8] = {1,2,3,4,5,6,7,8};
 
@@ -1059,7 +1059,7 @@ void DFRobot_LedDisplayModule::getDisplayAddress8_3()
   }
 }
 
-void DFRobot_LedDisplayModule::getDisplayAddress8_4()
+void DFRobot_LedDisplayModule::getDisplayAddress84()
 {
 
   int DisplayAreaData[8] = {1,2,3,4,5,6,7,8};
@@ -1116,7 +1116,7 @@ void DFRobot_LedDisplayModule::getDisplayAddress8_4()
   }
 }
 
-void DFRobot_LedDisplayModule::getDisplayAddress8_5()
+void DFRobot_LedDisplayModule::getDisplayAddress85()
 {
   int DisplayAreaData[8] = {1,2,3,4,5,6,7,8};
 
@@ -1168,7 +1168,7 @@ void DFRobot_LedDisplayModule::getDisplayAddress8_5()
   }
 }
 
-void DFRobot_LedDisplayModule::getDisplayAddress8_6()
+void DFRobot_LedDisplayModule::getDisplayAddress86()
 {
   int DisplayAreaData[8] = {1,2,3,4,5,6,7,8};
 
@@ -1216,7 +1216,7 @@ void DFRobot_LedDisplayModule::getDisplayAddress8_6()
   }
 }
 
-void DFRobot_LedDisplayModule::getDisplayAddress8_7()
+void DFRobot_LedDisplayModule::getDisplayAddress87()
 {
   int DisplayAreaData[8] = {1,2,3,4,5,6,7,8};
 
@@ -1264,9 +1264,9 @@ void DFRobot_LedDisplayModule::sensorGetDisplayAddress4()
 {
   switch(displayAreaFlag)
   {
-    case 1:getDisplayAddress4_1(); break;
-    case 2:getDisplayAddress4_2(); break;
-    case 3:getDisplayAddress4_3(); break;
+    case 1:getDisplayAddress41(); break;
+    case 2:getDisplayAddress42(); break;
+    case 3:getDisplayAddress43(); break;
   }
 }
 
@@ -1274,13 +1274,13 @@ void DFRobot_LedDisplayModule::sensorGetDisplayAddress8()
 {
   switch(displayAreaFlag)
   {
-    case 1:getDisplayAddress8_1(); break;
-    case 2:getDisplayAddress8_2(); break;
-    case 3:getDisplayAddress8_3(); break;
-    case 4:getDisplayAddress8_4(); break;
-    case 5:getDisplayAddress8_5(); break;
-    case 6:getDisplayAddress8_6(); break;
-    case 7:getDisplayAddress8_7(); break;
+    case 1:getDisplayAddress81(); break;
+    case 2:getDisplayAddress82(); break;
+    case 3:getDisplayAddress83(); break;
+    case 4:getDisplayAddress84(); break;
+    case 5:getDisplayAddress85(); break;
+    case 6:getDisplayAddress86(); break;
+    case 7:getDisplayAddress87(); break;
   }
 }
 
