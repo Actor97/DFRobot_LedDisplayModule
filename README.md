@@ -86,24 +86,16 @@ To use this library, first download the library file, paste it into the \Arduino
   /*!
    *  @brief 4位数码管设置显示区域
    *  @param 第1~4位的显示地址，可以为数字1~4
+   *  @n The default value is 82, because TAB2[82-48] happens to be the value for turning off
    */
-  void setDisplayArea4(int areaData);
-  void setDisplayArea4(int areaData1,int areaData2);
-  void setDisplayArea4(int areaData1,int areaData2,int areaData3);
-  void setDisplayArea4(int areaData1,int areaData2,int areaData3,int areaData4);
+  void setDisplayArea4(int areaData1 = 82,int areaData2 = 82,int areaData3 = 82,int areaData4 = 82);
 
   /*!
    *  @brief 8位数码管设置显示区域
    *  @param 第1~8位的显示地址，可以为数字1~8
+   *  @n The default value is 82, because TAB2[82-48] happens to be the value for turning off
    */
-  void setDisplayArea8(int areaData);
-  void setDisplayArea8(int areaData1,int areaData2);
-  void setDisplayArea8(int areaData1,int areaData2,int areaData3);
-  void setDisplayArea8(int areaData1,int areaData2,int areaData3,int areaData4);
-  void setDisplayArea8(int areaData1,int areaData2,int areaData3,int areaData4,int areaData5);
-  void setDisplayArea8(int areaData1,int areaData2,int areaData3,int areaData4,int areaData5,int areaData6);
-  void setDisplayArea8(int areaData1,int areaData2,int areaData3,int areaData4,int areaData5,int areaData6,int areaData7);
-  void setDisplayArea8(int areaData1,int areaData2,int areaData3,int areaData4,int areaData5,int areaData6,int areaData7,int areaData8);
+  void setDisplayArea8(int areaData1 = 82,int areaData2 = 82,int areaData3 = 82,int areaData4 = 82,int areaData5 = 82,int areaData6 = 82,int areaData7 = 82,int areaData8 = 82);
 
   /*!
    *  @brief 4位数码管打印显示信息
@@ -115,11 +107,9 @@ To use this library, first download the library file, paste it into the \Arduino
    *  @brief 4位数码管打印显示信息
    *  @param 第1~4位的显示数据，可以为数字0~9，大写字母A、B、C、D、E、F、H、L、O、P、U以及破折号- 
    *  @n 也可以带小数点，如"0." "9." "A." "-."
+   *  @n The default value is 82, because TAB2[82-48] happens to be the value for turning off
    */
-  void print4(const char buf1[]);
-  void print4(const char buf1[],const char buf2[]);
-  void print4(const char buf1[],const char buf2[],const char buf3[]);
-  void print4(const char buf1[],const char buf2[],const char buf3[],const char buf4[]);
+  print4(const char buf1[] = "82",const char buf2[] = "82",const char buf3[] = "82",const char buf4[] = "82");
 
   /*!
    *  @brief 8位数码管打印显示信息
@@ -131,15 +121,9 @@ To use this library, first download the library file, paste it into the \Arduino
    *  @brief 8位数码管打印显示信息
    *  @param 第1~4位的显示数据，可以为数字0~9，大写字母A、B、C、D、E、F、H、L、O、P、U以及破折号- 
    *  @n 也可以带小数点，如"0." "9." "A." "-."
+   *  @n The default value is 82, because TAB2[82-48] happens to be the value for turning off
    */
-  void print8(const char buf1[]);
-  void print8(const char buf1[],const char buf2[]);
-  void print8(const char buf1[],const char buf2[],const char buf3[]);
-  void print8(const char buf1[],const char buf2[],const char buf3[],const char buf4[]);
-  void print8(const char buf1[],const char buf2[],const char buf3[],const char buf4[],const char buf5[]);
-  void print8(const char buf1[],const char buf2[],const char buf3[],const char buf4[],const char buf5[],const char buf6[]);
-  void print8(const char buf1[],const char buf2[],const char buf3[],const char buf4[],const char buf5[],const char buf6[],const char buf7[]);
-  void print8(const char buf1[],const char buf2[],const char buf3[],const char buf4[],const char buf5[],const char buf6[],const char buf7[],const char buf8[]);
+ void print8(const char buf1[] = "82",const char buf2[] = "82",const char buf3[] = "82",const char buf4[] = "82",const char buf5[] = "82",const char buf6[] = "82",const char buf7[] = "82",const char buf8[] = "82");
 ```
 
 ## Compatibility
@@ -150,7 +134,6 @@ Arduino Uno        |      √       |              |             |
 Mega2560        |      √       |              |             | 
 Leonardo        |      √       |              |             | 
 ESP32         |      √       |              |             | 
-micro:bit        |      √       |              |             | 
 
 ## History
 

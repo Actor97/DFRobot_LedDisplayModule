@@ -45,7 +45,7 @@ class DFRobot_LedDisplayModule
 {
 public:  
   #define ERR_OK             0      //ok
-  #define ERR_ADDR          -1      //error in I2C address  
+  #define ERR_ADDR          -1      //error in I2C address 
     
 public:
  /**
@@ -124,18 +124,21 @@ public:
   /*!
    *  @brief 4位数码管设置显示区域
    *  @param 第1~4位的显示地址，可以为数字1~4
+   *  @n The default value is 82, because TAB2[82-48] happens to be the value for turning off
    */
   void setDisplayArea4(int areaData1 = 82,int areaData2 = 82,int areaData3 = 82,int areaData4 = 82);
 
   /*!
    *  @brief 8位数码管设置显示区域
    *  @param 第1~8位的显示地址，可以为数字1~8
+   *  @n The default value is 82, because TAB2[82-48] happens to be the value for turning off
    */
   void setDisplayArea8(int areaData1 = 82,int areaData2 = 82,int areaData3 = 82,int areaData4 = 82,int areaData5 = 82,int areaData6 = 82,int areaData7 = 82,int areaData8 = 82);
 
   /*!
    *  @brief 4位数码管打印显示信息
    *  @param 可以为整数、小数
+   *  @n The default value is 82, because TAB2[82-48] happens to be the value for turning off
    */  
   void print4(double sensorData);
   
@@ -143,6 +146,7 @@ public:
    *  @brief 4位数码管打印显示信息
    *  @param 第1~4位的显示数据，可以为数字0~9，大写字母A、B、C、D、E、F、H、L、O、P、U以及破折号- 
    *  @n 也可以带小数点，如"0." "9." "A." "-."
+   *  @n The default value is 82, because TAB2[82-48] happens to be the value for turning off
    */
   void print4(const char buf1[] = "82",const char buf2[] = "82",const char buf3[] = "82",const char buf4[] = "82");
 
@@ -156,6 +160,7 @@ public:
    *  @brief 8位数码管打印显示信息
    *  @param 第1~8位的显示数据，可以为数字0~9，大写字母A、B、C、D、E、F、H、L、O、P、U以及破折号- 
    *  @n 也可以带小数点，如"0." "9." "A." "-."
+   *  @n The default value is 82, because TAB2[82-48] happens to be the value for turning off
    */
   void print8(const char buf1[] = "82",const char buf2[] = "82",const char buf3[] = "82",const char buf4[] = "82",const char buf5[] = "82",const char buf6[] = "82",const char buf7[] = "82",const char buf8[] = "82");
 
