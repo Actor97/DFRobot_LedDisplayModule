@@ -138,7 +138,6 @@ public:
   /*!
    *  @brief 4位数码管打印显示信息
    *  @param 可以为整数、小数
-   *  @n The default value is 82, because TAB2[82-48] happens to be the value for turning off
    */  
   void print4(double sensorData);
   
